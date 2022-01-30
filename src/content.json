@@ -1,0 +1,22 @@
+{
+    "name": "Matt Macdonald",
+    "title": "Software Developer",
+    "contact": {
+        "location": "Seattle, WA",
+        "phone": "(208) 521-8399",
+        "websites": {
+            "personal": "",
+            "linkedIn": "",
+            "gitHub": ""
+        }
+    },
+    "experience": [],
+    "qualifications": [],
+    "education": {
+        "name": "Washington State University",
+        "location": "Pullman, WA",
+        "startDate": "",
+        "endDate": "",
+        "notes": []
+    }
+}

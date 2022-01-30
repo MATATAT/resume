@@ -1,0 +1,9 @@
+{
+  "short_name": "Matt Macdonald Resume",
+  "name": "Matt Macdonald Resume",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
