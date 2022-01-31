@@ -1,4 +1,4 @@
-import { Container, SvgIconTypeMap } from "@mui/material";
+import { Box, Grid, SvgIconTypeMap } from "@mui/material";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
 import SideBlock from "./SideBlock";
 import { Contact, Institution, Qualifications } from "./types";
@@ -24,25 +24,25 @@ type RenderFn = () => JSX.Element;
 
 export default function SideBar(props: SideBarProps) {
     return (
-        <Container>
+        <Box className="SideBar">
             <SideBlock title="Contact" renderer={renderContact(props.contact)} />
             <SideBlock title="Education" renderer={renderEducation(props.education)} />
             <SideBlock title="Skills" renderer={renderSkills(props.qualifications)} />
-        </Container>
+        </Box>
     );
 }
 
 function renderContact(props: Contact): RenderFn {
     return () => {
         return (
-            <div>
+            <Grid container spacing={1}>
                 <LabelWithIcon url={props.email} icon={EmailIcon} />
                 <LabelWithIcon url={props.phone} icon={PhoneIcon} />
                 <LabelWithIcon url={props.location} icon={LocationOnIcon} />
                 <LabelWithIcon url={props.websites.personal} icon={LanguageIcon} />
                 <LabelWithIcon url={props.websites.linkedIn} icon={LinkedInIcon} />
                 <LabelWithIcon url={props.websites.gitHub} icon={GitHubIcon} />
-            </div>
+            </Grid>
         );
     }
 }
@@ -50,10 +50,14 @@ function renderContact(props: Contact): RenderFn {
 function LabelWithIcon(props: { url: string, icon: IconType }) {
     const Icon = props.icon;
     return (
-        <div>
-            <div className="SideBar-icon-label">{props.url}</div>
-            <Icon fontSize="small" />
-        </div>
+        <>
+            <Grid item xs={11}>
+                <div className="SideBar-contact-label">{props.url}</div>
+            </Grid>
+            <Grid item xs={1}>
+                <Icon className="SideBar-contact-icon" fontSize="small" />
+            </Grid>
+        </>
     );
 }
 

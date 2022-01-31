@@ -1,3 +1,13 @@
-.SideBar-icon-label {
-    float: left;
+.SideBar {
+    background-color: #f1f1f1;
+}
+
+.SideBar-contact-label {
+    margin-top: 3px;
+    font-size: 14px;
+    float: right;
+}
+
+.SideBar-contact-icon {
+    vertical-align: middle;
 }

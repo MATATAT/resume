@@ -1,3 +1,5 @@
+import './SideBlock.css';
+
 interface SideBlockProps {
     title: string,
     renderer?: () => JSX.Element
@@ -6,7 +8,7 @@ interface SideBlockProps {
 export default function SideBlock(props: SideBlockProps) {
     return (
         <div>
-            <h3>{props.title}</h3>
+            <div className="SideBlock-title">{props.title.toUpperCase()}</div>
             <div>{props.renderer?.() ?? "Nothing here currently"}</div>
         </div>
     );

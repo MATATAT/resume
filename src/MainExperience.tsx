@@ -1,11 +1,11 @@
-import { Container } from "@mui/material";
+import { Box } from "@mui/material";
 import { Institution } from "./types";
 
 export default function MainExperience(props: { experience: Array<Institution> }) {
     return (
-        <Container maxWidth="sm">
+        <Box >
             {props.experience.map(buildExperienceBlock)}
-        </Container>
+        </Box>
     );
 }
 
