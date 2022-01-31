@@ -65,21 +65,35 @@
             ]
         }
     ],
-    "qualifications": {
-        "languages": [
-            "JavaScript/TypeScript",
-            "HTML5/CSS",
-            "Rust",
-            "C#/.NET",
-            "Python 3.X",
-            "SQL (T-SQL, NoSQL)"
-        ],
-        "tools": [
-            "NodeJS, KnockoutJS, ReactJS, jQuery",
-            "Kafka, Docker, Nomad, ElasticSearch",
-            "Windows, Unix, Git"
-        ]
-    },
+    "qualifications": [
+        {
+            "title": "Languages",
+            "children": [
+                "JavaScript/TypeScript",
+                "HTML5/CSS",
+                "Rust",
+                "C#/.NET",
+                "Python 3.X",
+                "SQL (T-SQL, NoSQL)"
+            ]
+        },
+        {
+            "title": "Tools",
+            "children": [
+                "NodeJS, KnockoutJS, ReactJS, jQuery",
+                "Kafka, Docker, Nomad, ElasticSearch",
+                "Windows, Unix, Git"
+            ]
+        },
+        {
+            "title": "Likes",
+            "children": [
+                "Learning new programming languages",
+                "Strong typing in code",
+                "Functional programming paradigms"
+            ]
+        }
+    ],
     "education": {
         "name": "Washington State University",
         "position": "B.S. in Computer Science",

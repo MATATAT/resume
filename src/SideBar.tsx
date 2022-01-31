@@ -1,7 +1,7 @@
 import { Box, Grid, SvgIconTypeMap } from "@mui/material";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
 import SideBlock from "./SideBlock";
-import { Contact, Institution, Qualifications } from "./types";
+import { Contact, Institution, Qualification } from "./types";
 
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -17,7 +17,7 @@ type IconType = OverridableComponent<SvgIconTypeMap<{}, 'svg'>> & { muiName: str
 interface SideBarProps {
     contact: Contact,
     education: Institution,
-    qualifications: Qualifications
+    qualifications: Array<Qualification>
 }
 
 type RenderFn = () => JSX.Element;
@@ -74,22 +74,20 @@ function renderEducation(props: Institution): RenderFn {
     }
 }
 
-function renderSkills(props: Qualifications): RenderFn {
+function renderSkills(props: Array<Qualification>): RenderFn {
     return () => {
         return (
             <div>
-                <div>
-                    <div className="SideBar-skills-subtitle">Languages</div>
-                    {props.languages.map((note) => {
-                        return <div className="SideBar-skills-item">{note}</div>;
-                    })}
-                </div>
-                <div>
-                    <div className="SideBar-skills-subtitle">Tools</div>
-                    {props.tools.map((note) => {
-                        return <div className="SideBar-skills-item">{note}</div>;
-                    })}
-                </div>
+                {props.map((qualification) => {
+                    return (
+                        <div>
+                            <div className="SideBar-skills-subtitle">{qualification.title}</div>
+                            {qualification.children.map((note) => {
+                                return <div className="SideBar-skills-item">{note}</div>;
+                            })}
+                        </div>
+                    );
+                })}
             </div>
         );
     };

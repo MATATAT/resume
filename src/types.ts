@@ -3,7 +3,7 @@ export interface Resume {
     title: string,
     contact: Contact,
     experience: Array<Institution>,
-    qualifications: Qualifications,
+    qualifications: Array<Qualification>,
     education: Institution
 }
 
@@ -29,9 +29,15 @@ export interface Institution {
     notes: Notes
 }
 
-export interface Qualifications {
-    languages: Notes,
-    tools: Notes
+export interface Qualification {
+    title: string,
+    children: Notes
 }
+
+// export interface Qualifications {
+//     languages: Notes,
+//     tools: Notes,
+//     extra: Notes
+// }
 
 export type Notes = Array<string>;
