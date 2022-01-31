@@ -1,3 +1,5 @@
+import { Box } from '@mui/material';
+
 import './Header.css';
 
 interface HeaderInfo {
@@ -7,9 +9,9 @@ interface HeaderInfo {
 
 export default function Header(props: HeaderInfo) {
     return (
-        <div className='Header'>
+        <Box className='Header'>
             <div className='Header-name'>{props.name}</div>
             <div className='Header-subtitle'>{props.title}</div>
-        </div>
+        </Box>
     );
 }

@@ -1,6 +1,5 @@
 .App {
     box-sizing: border-box;
-    padding-bottom: 10rem;
     display: flex;
     flex-direction: column;
 }

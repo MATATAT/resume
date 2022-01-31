@@ -2,6 +2,7 @@
     font-size: 14px;
     display: flex;
     flex-direction: column;
+    padding-bottom: 10rem;
 }
 
 .MainExperience-title {

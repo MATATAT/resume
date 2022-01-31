@@ -3,13 +3,13 @@ import Header from './Header';
 
 import SideBar from './SideBar';
 import MainExperience from './MainExperience';
-import { Grid } from '@mui/material';
+import { Grid, Box } from '@mui/material';
 
 import './App.css'
 
 export default function App(props: Resume) {
     return (
-        <div className='App'>
+        <Box className='App'>
             <Header
                 name={props.name} 
                 title={props.title} />
@@ -25,6 +25,6 @@ export default function App(props: Resume) {
                         experience={props.experience} />
                 </Grid>
             </Grid>
-        </div>
+        </Box>
     );
 }
