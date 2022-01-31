@@ -79,7 +79,7 @@
         {
             "title": "Tools",
             "children": [
-                "NodeJS, KnockoutJS, ReactJS, jQuery",
+                "KnockoutJS, ReactJS, jQuery",
                 "Kafka, Docker, Nomad, ElasticSearch",
                 "Windows, Unix, Git"
             ]
