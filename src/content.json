@@ -27,6 +27,42 @@
                 "Gave lectures across the organization on Apple HLS standards, team-scale project planning techniques, pair programming techniques, and mob programming techniques.",
                 "Mentored junior developers on project management and scalable software patterns."
             ]
+        },
+        {
+            "name": "iStreamPlanet",
+            "position": "Senior Software Developer",
+            "location": "Seattle, WA",
+            "startDate": "November 2015",
+            "endDate": "August 2019",
+            "notes": [
+                "Gathered requirements, designed, and implemented automated video source routing and monitoring via service interfacing with hardware routers.",
+                "Led telemetry and monitoring efforts on core transcoding platform using StatsD, Kafka, and DataDog.",
+                "Gathered requirements and developed components responsible for ad and program signaling. Ingested SCTE-35 broadcasting-standard signals and produced output based on user settings.",
+                "Designed and implemented logging and debugging pipeline for the above component using AWS services such as Kinesis, Lambda, and ElasticSearch.",
+                "Led investigations on time-sensitive software defects and service outages."
+            ]
+        },
+        {
+            "name": "Ingeniux Inc.",
+            "position": "Software Development Engineer II",
+            "location": "Seattle, WA",
+            "startDate": "November 2015",
+            "endDate": "August 2019",
+            "notes": [
+                "Developed document search framework on top of Lucene allowing search results to be fine-tuned on a per customer basis. Improved original design to increase speeds up to 66%.",
+                "Addressed performance issues with user importing resulting in processing times going from hours to minutes."
+            ]
+        },
+        {
+            "name": "Schweitzer Engineering Laboratory",
+            "position": "Software Engineering Intern",
+            "location": "Pullman, WA",
+            "startDate": "May 2010",
+            "endDate": "May 2012",
+            "notes": [
+                "Developed document search framework on top of Lucene allowing search results to be fine-tuned on a per customer basis. Improved original design to increase speeds up to 66%.",
+                "Addressed performance issues with user importing resulting in processing times going from hours to minutes."
+            ]
         }
     ],
     "qualifications": {
