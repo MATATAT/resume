@@ -1,32 +1,22 @@
-import { Component } from 'react';
 import { Resume } from './types';
 import Header from './Header';
 
 import './App.css';
+import SideBar from './SideBar';
+import MainExperience from './MainExperience';
 
-export default class App extends Component<Resume> {
-    public state: Resume;
-
-    constructor(props: Resume) {
-        super(props);
-        this.state = props;
-    }
-
-    public render() {
-        return (
-            <div className="App">
-                <Header name={this.state.name} title={this.state.title} />
-            </div>
-        )
-    }
+export default function App(props: Resume) {
+    return (
+        <div className="App">
+            <Header 
+                name={props.name} 
+                title={props.title} />
+            <SideBar 
+                contact={props.contact} 
+                education={props.education} 
+                qualifications={props.qualifications} />
+            <MainExperience 
+                experience={props.experience} />
+        </div>
+    );
 }
-
-// function App(props: Resume) {
-//     return (
-//         <div className="App">
-//             <Header name={props.name} title={props.title} />
-//         </div>
-//     );
-// }
-
-// export default App;
