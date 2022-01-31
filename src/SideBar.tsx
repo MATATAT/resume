@@ -51,10 +51,10 @@ function LabelWithIcon(props: { url: string, icon: IconType }) {
     const Icon = props.icon;
     return (
         <>
-            <Grid item xs={11}>
+            <Grid item xs={11.25}>
                 <div className="SideBar-contact-label">{props.url}</div>
             </Grid>
-            <Grid item xs={1}>
+            <Grid item xs={0.75}>
                 <Icon className="SideBar-contact-icon" fontSize="small" />
             </Grid>
         </>
