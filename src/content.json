@@ -3,20 +3,52 @@
     "title": "Software Developer",
     "contact": {
         "location": "Seattle, WA",
+        "email": "matt.david.macdonald@gmail.com",
         "phone": "(208) 521-8399",
         "websites": {
-            "personal": "",
-            "linkedIn": "",
-            "gitHub": ""
+            "personal": "http://www.macdonaldmatt.com",
+            "linkedIn": "https://www.linkedin.com/in/mattmacdonald1989/",
+            "gitHub": "https://github.com/MATATAT"
         }
     },
-    "experience": [],
-    "qualifications": [],
+    "experience": [
+        {
+            "name": "Hulu/Disney Streaming",
+            "position": "Senior Software Developer",
+            "location": "Seattle, WA",
+            "startDate": "August 2019",
+            "endDate": "",
+            "notes": [
+                "Led front-end development of a first-party interactive ad solution for Hulu device platforms.",
+                "Led development integrating 3rd-party playback analytics into device platforms.",
+                "Analyzed performance on live programming guide and optimized to improve initial render time by 75% (~6 seconds). Response times in navigation were also improved.",
+                "Collaborated with UI designers and product managers on improved playback seeking experience and “channel flipping” features.",
+                "Assisted in development of a NodeJS based Roku BrightScript interpreter.",
+                "Gave lectures across the organization on Apple HLS standards, team-scale project planning techniques, pair programming techniques, and mob programming techniques.",
+                "Mentored junior developers on project management and scalable software patterns."
+            ]
+        }
+    ],
+    "qualifications": {
+        "languages": [
+            "JavaScript/TypeScript (NodeJS, KnockoutJS, jQuery)",
+            "HTML5/CSS",
+            "Rust",
+            "C#/.NET",
+            "Python 3.X",
+            "SQL (T-SQL, NoSQL)"
+        ],
+        "tools": [
+            "Kafka, Docker, Nomad, ElasticSearch",
+            "Windows, Unix, Git"
+        ]
+    },
     "education": {
         "name": "Washington State University",
+        "position": "B.S. in Computer Science",
         "location": "Pullman, WA",
-        "startDate": "",
-        "endDate": "",
+        "startDate": "2008",
+        "endDate": "2011",
         "notes": []
     }
 }
