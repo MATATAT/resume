@@ -7,7 +7,7 @@ interface SideBlockProps {
 
 export default function SideBlock(props: SideBlockProps) {
     return (
-        <div>
+        <div className='SideBlock'>
             <div className="SideBlock-title">{props.title.toUpperCase()}</div>
             <div>{props.renderer?.() ?? "Nothing here currently"}</div>
         </div>

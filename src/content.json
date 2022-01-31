@@ -6,9 +6,9 @@
         "email": "matt.david.macdonald@gmail.com",
         "phone": "(208) 521-8399",
         "websites": {
-            "personal": "http://www.macdonaldmatt.com",
-            "linkedIn": "https://www.linkedin.com/in/mattmacdonald1989/",
-            "gitHub": "https://github.com/MATATAT"
+            "personal": "macdonaldmatt.com",
+            "linkedIn": "linkedin.com/in/mattmacdonald1989",
+            "gitHub": "github.com/MATATAT"
         }
     },
     "experience": [
@@ -67,7 +67,7 @@
     ],
     "qualifications": {
         "languages": [
-            "JavaScript/TypeScript (NodeJS, KnockoutJS, jQuery)",
+            "JavaScript/TypeScript",
             "HTML5/CSS",
             "Rust",
             "C#/.NET",
@@ -75,6 +75,7 @@
             "SQL (T-SQL, NoSQL)"
         ],
         "tools": [
+            "NodeJS, KnockoutJS, ReactJS, jQuery",
             "Kafka, Docker, Nomad, ElasticSearch",
             "Windows, Unix, Git"
         ]

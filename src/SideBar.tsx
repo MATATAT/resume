@@ -35,7 +35,7 @@ export default function SideBar(props: SideBarProps) {
 function renderContact(props: Contact): RenderFn {
     return () => {
         return (
-            <Grid container spacing={1}>
+            <Grid container spacing={0.5}>
                 <LabelWithIcon url={props.email} icon={EmailIcon} />
                 <LabelWithIcon url={props.phone} icon={PhoneIcon} />
                 <LabelWithIcon url={props.location} icon={LocationOnIcon} />
@@ -64,11 +64,11 @@ function LabelWithIcon(props: { url: string, icon: IconType }) {
 function renderEducation(props: Institution): RenderFn {
     return () => {
         return (
-            <div>
+            <div className="SideBar-education">
                 <div>{props.position}</div>
                 <div>{props.name}</div>
-                <div>{props.startDate} - {props.endDate}</div>
-                <div>{props.location}</div>
+                <div className="SideBar-education-subtitle">{props.startDate} - {props.endDate}</div>
+                <div className="SideBar-education-subtitle">{props.location}</div>
             </div>
         );
     }
@@ -79,15 +79,15 @@ function renderSkills(props: Qualifications): RenderFn {
         return (
             <div>
                 <div>
-                    <h5>Languages</h5>
+                    <div className="SideBar-skills-subtitle">Languages</div>
                     {props.languages.map((note) => {
-                        return <div>{note}</div>;
+                        return <div className="SideBar-skills-item">{note}</div>;
                     })}
                 </div>
                 <div>
-                    <h5>Tools</h5>
+                    <div className="SideBar-skills-subtitle">Tools</div>
                     {props.tools.map((note) => {
-                        return <div>{note}</div>;
+                        return <div className="SideBar-skills-item">{note}</div>;
                     })}
                 </div>
             </div>

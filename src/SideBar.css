@@ -1,13 +1,32 @@
 .SideBar {
     background-color: #f1f1f1;
+    text-align: right;
+    height: 100%;
 }
 
 .SideBar-contact-label {
-    margin-top: 3px;
-    font-size: 14px;
+    font-size: 1.2vw;
     float: right;
 }
 
 .SideBar-contact-icon {
     vertical-align: middle;
+}
+
+.SideBar-education {
+    font-size: 1.3vw;
+}
+
+.SideBar-education-subtitle {
+    font-size: 1vw;
+}
+
+.SideBar-skills-subtitle {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.SideBar-skills-item {
+    font-size: 1.2vw;
 }

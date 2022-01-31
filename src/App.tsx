@@ -1,7 +1,6 @@
 import { Resume } from './types';
 import Header from './Header';
 
-import './App.css';
 import SideBar from './SideBar';
 import MainExperience from './MainExperience';
 import { Grid } from '@mui/material';
