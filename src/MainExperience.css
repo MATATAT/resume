@@ -1,0 +1,21 @@
+.MainExperience {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+.MainExperience-title {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px 0 0 0;
+    text-transform: uppercase;
+}
+
+.MainExperience-position {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.MainExperience-list {
+    margin-top: 0;
+}

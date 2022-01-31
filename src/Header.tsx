@@ -8,8 +8,8 @@ interface HeaderInfo {
 export default function Header(props: HeaderInfo) {
     return (
         <div className='Header'>
-            <div className='Header-name'>{props.name.toUpperCase()}</div>
-            <span className='Header-subtitle'>{props.title.toUpperCase()}</span>
+            <div className='Header-name'>{props.name}</div>
+            <div className='Header-subtitle'>{props.title}</div>
         </div>
     );
 }

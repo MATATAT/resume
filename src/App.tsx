@@ -5,9 +5,11 @@ import SideBar from './SideBar';
 import MainExperience from './MainExperience';
 import { Grid } from '@mui/material';
 
+import './App.css'
+
 export default function App(props: Resume) {
     return (
-        <div>
+        <div className='App'>
             <Header
                 name={props.name} 
                 title={props.title} />

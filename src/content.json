@@ -60,8 +60,7 @@
             "startDate": "May 2010",
             "endDate": "May 2012",
             "notes": [
-                "Developed document search framework on top of Lucene allowing search results to be fine-tuned on a per customer basis. Improved original design to increase speeds up to 66%.",
-                "Addressed performance issues with user importing resulting in processing times going from hours to minutes."
+                "Designed user interface and worked with senior engineers to develop reporting interface for power station equipment."
             ]
         }
     ],

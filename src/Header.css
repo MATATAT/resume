@@ -11,9 +11,11 @@
 .Header-name {
     text-align: center;
     font-size: 60px;
+    text-transform: uppercase;
 }
 
 .Header-subtitle {
     font-size: 20px;
     font-style: italic;
+    text-transform: uppercase;
 }
