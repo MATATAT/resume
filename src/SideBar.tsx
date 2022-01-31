@@ -10,6 +10,8 @@ import LanguageIcon from '@mui/icons-material/Language';
 import PhoneIcon from '@mui/icons-material/Phone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 
+import './SideBar.css';
+
 type IconType = OverridableComponent<SvgIconTypeMap<{}, 'svg'>> & { muiName: string };
 
 interface SideBarProps {
@@ -49,8 +51,8 @@ function LabelWithIcon(props: { url: string, icon: IconType }) {
     const Icon = props.icon;
     return (
         <div>
-            <span>{props.url}</span>
-            <Icon />
+            <div className="SideBar-icon-label">{props.url}</div>
+            <Icon fontSize="small" />
         </div>
     );
 }

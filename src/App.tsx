@@ -8,12 +8,12 @@ import { Grid } from '@mui/material';
 
 export default function App(props: Resume) {
     return (
-        <div className="App">
-            <Header 
+        <div>
+            <Header
                 name={props.name} 
                 title={props.title} />
-            <Grid container spacing={2}>
-                <Grid item xs={2}>
+            <Grid container spacing={3}>
+                <Grid item xs={4}>
                     <SideBar 
                         contact={props.contact} 
                         education={props.education} 

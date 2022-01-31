@@ -1,3 +1,5 @@
+import './Header.css';
+
 interface HeaderInfo {
     name: string,
     title: string
@@ -5,9 +7,9 @@ interface HeaderInfo {
 
 export default function Header(props: HeaderInfo) {
     return (
-        <div>
-            <h1>{props.name}</h1>
-            <span>{props.title}</span>
+        <div className='Header'>
+            <div className='Header-name'>{props.name.toUpperCase()}</div>
+            <span className='Header-subtitle'>{props.title.toUpperCase()}</span>
         </div>
-    )
+    );
 }

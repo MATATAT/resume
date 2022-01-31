@@ -1,9 +1,9 @@
-import { Institution } from "./types";
 import { Container } from "@mui/material";
+import { Institution } from "./types";
 
 export default function MainExperience(props: { experience: Array<Institution> }) {
     return (
-        <Container maxWidth="md" >
+        <Container maxWidth="sm">
             {props.experience.map(buildExperienceBlock)}
         </Container>
     );
@@ -12,6 +12,7 @@ export default function MainExperience(props: { experience: Array<Institution> }
 function buildExperienceBlock(experience: Institution) {
     return (
         <div>
+            <div>Work Experience</div>
             <div>{experience.position}</div>
             <div>{experience.name}</div>
             <div>{experience.startDate} - {experience.endDate ?? 'Current'} / {experience.location}</div>
