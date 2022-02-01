@@ -1,4 +1,4 @@
-import { Box, Grid, SvgIconTypeMap } from "@mui/material";
+import { Box, SvgIconTypeMap } from "@mui/material";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
 import SideBlock from "./SideBlock";
 import { Contact, Institution, Qualification } from "./types";
@@ -35,14 +35,14 @@ export default function SideBar(props: SideBarProps) {
 function renderContact(props: Contact): RenderFn {
     return () => {
         return (
-            <Grid container spacing={0.5}>
+            <Box>
                 <LabelWithIcon url={props.email} icon={EmailIcon} />
                 <LabelWithIcon url={props.phone} icon={PhoneIcon} />
                 <LabelWithIcon url={props.location} icon={LocationOnIcon} />
                 <LabelWithIcon url={props.websites.personal} icon={LanguageIcon} />
                 <LabelWithIcon url={props.websites.linkedIn} icon={LinkedInIcon} />
                 <LabelWithIcon url={props.websites.gitHub} icon={GitHubIcon} />
-            </Grid>
+            </Box>
         );
     }
 }
@@ -50,14 +50,12 @@ function renderContact(props: Contact): RenderFn {
 function LabelWithIcon(props: { url: string, icon: IconType }) {
     const Icon = props.icon;
     return (
-        <>
-            <Grid item xs={11.25}>
-                <div className="SideBar-contact-label">{props.url}</div>
-            </Grid>
-            <Grid item xs={0.75}>
-                <Icon className="SideBar-contact-icon" fontSize="small" />
-            </Grid>
-        </>
+        <div className="SideBar-label-with-icon">
+            <div className="SideBar-contact-label">{props.url}</div>
+            <div className="SideBar-contact-icon">
+                <Icon fontSize="small" />
+            </div>
+        </div>
     );
 }
 

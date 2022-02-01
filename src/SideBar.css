@@ -6,13 +6,24 @@
     height: 100%;
 }
 
+.SideBar-label-with-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
 .SideBar-contact-label {
     font-size: 1.2vw;
-    float: right;
+    display: flex;
+    align-items: center;
 }
 
 .SideBar-contact-icon {
-    vertical-align: middle;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0.25em;
 }
 
 .SideBar-education {
