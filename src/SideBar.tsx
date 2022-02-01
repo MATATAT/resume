@@ -1,4 +1,4 @@
-import { Box, SvgIconTypeMap } from "@mui/material";
+import { SvgIconTypeMap } from "@mui/material";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
 import SideBlock from "./SideBlock";
 import { Contact, Institution, Qualification } from "./types";
