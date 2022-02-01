@@ -3,6 +3,7 @@
     text-align: right;
     display: flex;
     flex-direction: column;
+    padding-left: 3em;
 }
 
 .SideBar-label-with-icon {
