@@ -3,7 +3,6 @@
     text-align: right;
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
 
 .SideBar-label-with-icon {
