@@ -24,25 +24,25 @@ type RenderFn = () => JSX.Element;
 
 export default function SideBar(props: SideBarProps) {
     return (
-        <Box className="SideBar">
+        <div className="SideBar">
             <SideBlock title="Contact" renderer={renderContact(props.contact)} />
             <SideBlock title="Education" renderer={renderEducation(props.education)} />
             <SideBlock title="Skills" renderer={renderSkills(props.qualifications)} />
-        </Box>
+        </div>
     );
 }
 
 function renderContact(props: Contact): RenderFn {
     return () => {
         return (
-            <Box>
+            <div>
                 <LabelWithIcon url={props.email} icon={EmailIcon} />
                 <LabelWithIcon url={props.phone} icon={PhoneIcon} />
                 <LabelWithIcon url={props.location} icon={LocationOnIcon} />
                 <LabelWithIcon url={props.websites.personal} icon={LanguageIcon} />
                 <LabelWithIcon url={props.websites.linkedIn} icon={LinkedInIcon} />
                 <LabelWithIcon url={props.websites.gitHub} icon={GitHubIcon} />
-            </Box>
+            </div>
         );
     }
 }

@@ -1,5 +1,13 @@
 .SideBlock {
     margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.SideBlock > div {
+    display: flex;
+    justify-content: right;
 }
 
 .SideBlock-title {
