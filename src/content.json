@@ -87,9 +87,9 @@
         {
             "title": "Likes",
             "children": [
-                "Learning new programming languages",
-                "Strong typing in code",
-                "Functional programming paradigms"
+                "Collaborative programming",
+                "Functional programming paradigms",
+                "Strong typing in code"
             ]
         }
     ],

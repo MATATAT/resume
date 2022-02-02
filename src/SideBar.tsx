@@ -62,11 +62,11 @@ function LabelWithIcon(props: { url: string, icon: IconType }) {
 function renderEducation(props: Institution): RenderFn {
     return () => {
         return (
-            <div className="SideBar-education">
+            <div>
                 <div>{props.position}</div>
                 <div>{props.name}</div>
-                <div className="SideBar-education-subtitle">{props.startDate} - {props.endDate}</div>
-                <div className="SideBar-education-subtitle">{props.location}</div>
+                <div>{props.startDate} - {props.endDate}</div>
+                <div>{props.location}</div>
             </div>
         );
     }
