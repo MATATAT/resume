@@ -6,5 +6,5 @@
 
 .App-main {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap-reverse;
 }

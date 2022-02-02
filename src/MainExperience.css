@@ -1,4 +1,6 @@
 .MainExperience {
+    display: flex;
+    flex-direction: column;
     font-size: 14px;
     padding-bottom: 10rem;
     padding-left: 1em;

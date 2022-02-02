@@ -13,7 +13,6 @@
 }
 
 .SideBar-contact-label {
-    font-size: 1.2vw;
     display: flex;
     align-items: center;
 }
@@ -27,11 +26,9 @@
 }
 
 .SideBar-education {
-    font-size: 1.3vw;
 }
 
 .SideBar-education-subtitle {
-    font-size: 1.2vw;
 }
 
 .SideBar-skills-subtitle {
@@ -41,5 +38,4 @@
 }
 
 .SideBar-skills-item {
-    font-size: 1.2vw;
 }
