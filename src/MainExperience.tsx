@@ -1,13 +1,23 @@
 import { Institution } from "./types";
 
 import './MainExperience.css'
+import { Box } from "@mui/material";
 
 export default function MainExperience(props: { experience: Array<Institution> }) {
     return (
-        <div className="MainExperience">
+        <Box sx={{
+            fontSize: 14,
+            bgcolor: 'white',
+            paddingLeft: 2,
+            paddingRight: 2
+        }}>
             <div className="MainExperience-title">Work Experience</div>
             {props.experience.map(buildExperienceBlock)}
-        </div>
+        </Box>
+        // <div className="MainExperience">
+        //     <div className="MainExperience-title">Work Experience</div>
+        //     {props.experience.map(buildExperienceBlock)}
+        // </div>
     );
 }
 

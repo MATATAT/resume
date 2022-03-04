@@ -1,4 +1,4 @@
-import { SvgIconTypeMap } from "@mui/material";
+import { Stack, SvgIconTypeMap, useMediaQuery, useTheme } from "@mui/material";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
 import SideBlock from "./SideBlock";
 import { Contact, Institution, Qualification } from "./types";
@@ -11,6 +11,7 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 import './SideBar.css';
+import { Box } from "@mui/system";
 
 type IconType = OverridableComponent<SvgIconTypeMap<{}, 'svg'>> & { muiName: string };
 
@@ -23,40 +24,80 @@ interface SideBarProps {
 type RenderFn = () => JSX.Element;
 
 export default function SideBar(props: SideBarProps) {
+    const theme = useTheme();
+    const largeScreen = useMediaQuery(theme.breakpoints.up('lg'));
+
     return (
-        <div className="SideBar">
-            <SideBlock title="Contact" renderer={renderContact(props.contact)} />
+        // <div className="SideBar">
+        //     <SideBlock title="Contact" renderer={renderContact(props.contact)} />
+        //     <SideBlock title="Education" renderer={renderEducation(props.education)} />
+        //     <SideBlock title="Skills" renderer={renderSkills(props.qualifications)} />
+        // </div>
+        <Box sx={{
+            textAlign: (largeScreen) ? 'right' : 'left',
+            bgcolor: '#f1f1f1',
+            paddingRight: 2,
+            paddingLeft: 2
+        }}>
+            <SideBlock title="Contact" renderer={renderContact(props.contact, largeScreen)} />
             <SideBlock title="Education" renderer={renderEducation(props.education)} />
             <SideBlock title="Skills" renderer={renderSkills(props.qualifications)} />
-        </div>
+        </Box>
     );
 }
 
-function renderContact(props: Contact): RenderFn {
+function renderContact(props: Contact, largeScreen: boolean): RenderFn {
     return () => {
         return (
-            <div>
-                <LabelWithIcon url={props.email} icon={EmailIcon} />
-                <LabelWithIcon url={props.phone} icon={PhoneIcon} />
-                <LabelWithIcon url={props.location} icon={LocationOnIcon} />
-                <LabelWithIcon url={props.websites.personal} icon={LanguageIcon} />
-                <LabelWithIcon url={props.websites.linkedIn} icon={LinkedInIcon} />
-                <LabelWithIcon url={props.websites.gitHub} icon={GitHubIcon} />
-            </div>
+            <>
+                <LabelWithIcon url={props.email} icon={EmailIcon} largeScreen={largeScreen} />
+                <LabelWithIcon url={props.phone} icon={PhoneIcon} largeScreen={largeScreen} />
+                <LabelWithIcon url={props.location} icon={LocationOnIcon} largeScreen={largeScreen} />
+                <LabelWithIcon url={props.websites.personal} icon={LanguageIcon} largeScreen={largeScreen} />
+                <LabelWithIcon url={props.websites.linkedIn} icon={LinkedInIcon} largeScreen={largeScreen} />
+                <LabelWithIcon url={props.websites.gitHub} icon={GitHubIcon} largeScreen={largeScreen} />
+            </>
         );
     }
 }
 
-function LabelWithIcon(props: { url: string, icon: IconType }) {
+function LabelWithIcon(props: { url: string, icon: IconType, largeScreen: boolean }) {
     const Icon = props.icon;
     return (
-        <div className="SideBar-label-with-icon">
-            <div className="SideBar-contact-label">{props.url}</div>
-            <div className="SideBar-contact-icon">
-                <Icon fontSize="small" />
-            </div>
-        </div>
-    );
+        <Stack direction={(props.largeScreen ? 'row-reverse' : 'row')} spacing={1}>
+            <Icon sx={{
+                alignItems: 'center',
+                alignContent: 'center',
+                justifyContent: 'center'
+            }} fontSize="small" />
+            <Box sx={{ 
+                alignItems: 'center',
+                alignContent: 'center',
+                justifyContent: 'center'
+            }}>{props.url}</Box>
+        </Stack>
+        // <Stack direction={(props.largeScreen ? 'row' : 'row-reverse')}>
+        //     <div >{props.url}</div>
+        //     {/* <Icon fontSize="small" /> */}
+        // </Stack>
+    )
+
+    // TODO: Better way to do this?
+    // return (props.largeScreen) ? (
+    //     <div className="SideBar-label-with-icon">
+    //         <div className="SideBar-contact-label">{props.url}</div>
+    //         <div className="SideBar-contact-icon">
+    //             <Icon fontSize="small" />
+    //         </div>
+    //     </div>
+    // ) : (
+    //     <Box>
+    //         <div className="SideBar-contact-icon">
+    //             <Icon fontSize="small" />
+    //         </div>
+    //         <div className="SideBar-contact-label">{props.url}</div>
+    //     </Box>
+    // );
 }
 
 function renderEducation(props: Institution): RenderFn {

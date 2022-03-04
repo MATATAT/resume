@@ -1,25 +1,27 @@
 import { Resume } from './types';
 import Header from './Header';
 
-import SideBar from './SideBar';
-import MainExperience from './MainExperience';
-
 import './App.css'
+import { Grid, Stack } from '@mui/material';
+import Body from './Body';
 
 export default function App(props: Resume) {
     return (
-        <div className='App'>
-            <Header
-                name={props.name} 
-                title={props.title} />
-            <div className='App-main'>
-                <SideBar 
-                    contact={props.contact} 
-                    education={props.education} 
-                    qualifications={props.qualifications} />
-                <MainExperience 
+        <Grid container sx={{
+            bgcolor: '#313641'
+        }}>
+            <Grid item xs={0} sm={1} />
+            <Grid item xs={12} sm={10} >
+                <Header
+                    name={props.name}
+                    title={props.title} />
+                <Body 
+                    contact={props.contact}
+                    qualifications={props.qualifications}
+                    education={props.education}
                     experience={props.experience} />
-            </div>
-        </div>
+            </Grid>
+            <Grid item xs={0} sm={1} />
+        </Grid>
     );
 }
