@@ -66,15 +66,9 @@ function LabelWithIcon(props: { url: string, icon: IconType, largeScreen: boolea
     return (
         <Stack direction={(props.largeScreen ? 'row-reverse' : 'row')} spacing={1}>
             <Icon sx={{
-                alignItems: 'center',
-                alignContent: 'center',
-                justifyContent: 'center'
+                marginTop: 0.4
             }} fontSize="small" />
-            <Box sx={{ 
-                alignItems: 'center',
-                alignContent: 'center',
-                justifyContent: 'center'
-            }}>{props.url}</Box>
+            <Box>{props.url}</Box>
         </Stack>
         // <Stack direction={(props.largeScreen ? 'row' : 'row-reverse')}>
         //     <div >{props.url}</div>

@@ -13,16 +13,20 @@ export interface BodyInfo {
 export default function Body(props: BodyInfo) {
     return (
         <Grid container flexWrap="wrap-reverse" sx={{
-            bgcolor: 'white',
-            paddingBottom: 15
+            bgcolor: 'white'
         }}>
-            <Grid item lg={4} xs={12}>
+            <Grid item lg={4} xs={12} sx={{
+                bgcolor: '#f1f1f1',
+                paddingBottom: 20
+            }}>
                 <SideBar
                     contact={props.contact}
                     education={props.education}
                     qualifications={props.qualifications} />
             </Grid>
-            <Grid item lg={8} xs={12}>
+            <Grid item lg={8} xs={12} sx={{
+                paddingBottom: 10
+            }}>
                 <MainExperience
                     experience={props.experience} />
             </Grid>
